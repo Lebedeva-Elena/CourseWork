@@ -15,14 +15,10 @@ public class Main {
         storage.printFullName();
 
 
-
-
-
     }
 
 
-
-    }
+}
 
 
 
