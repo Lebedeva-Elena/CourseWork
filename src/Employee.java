@@ -1,30 +1,26 @@
 public class Employee {
-    private String fullName;
-    private int salary;
+    public double getSalary;
+    private String surname;
+    private String name;
+    private String patronymic;
+    private double salary;
     private int department;
+    private static int idCounter = 1;
     private int id;
 
-    public static int idCounter = 1;
 
-
-    public Employee(String fullName, int department, int salary) {
-        this.fullName = fullName;
-        this.department = department;
-        this.salary = salary;
-        this.id = idCounter;
-        this.idCounter++;
-
-    }
-    private Employee[] employees;
-    public Employee() {
-        int[] employees = new int[10];
-
+    public String getSurname() {
+        return surname;
     }
 
-    public String getFullName() {
-        return fullName;
-
+    public String getName() {
+        return name;
     }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+
 
     public int getDepartment() {
 
@@ -34,26 +30,53 @@ public class Employee {
     public int getId() {
         return id;
     }
-    public static int getIdCounter() {
-        return idCounter;
-    }
-    public int getSalary() {
+
+    public double getSalary() {
+
+
         return salary;
+    }
+
+    public Employee(String surname, String name, String patronymic, int department,
+                    double salary) {
+        this.surname = surname;
+        this.name = name;
+        this.patronymic = patronymic;
+        this.department = department;
+        this.salary = salary;
+        this.id = idCounter++;
+
+
     }
 
     public void setDepartment(int department) {
         this.department = department;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
+    @Override
     public String toString() {
-        return "id: " + "Сотрудник " + getFullName() + " из " + getDepartment() + " отдела получает " + getSalary() + " рублей";
+        return "Employee{" +
+                "surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", salary=" + salary +
+                ", department=" + department +
+                ", id=" + id +
+                '}';
     }
 
+    public  String getFullName() {
+        return  "Employee{" +
+                "surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                ", patronymic='" + patronymic;
+    }
 }
+
 
 
 
