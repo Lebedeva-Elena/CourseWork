@@ -1,5 +1,4 @@
 public class Employee {
-    public double getSalary;
     private String surname;
     private String name;
     private String patronymic;
@@ -45,10 +44,7 @@ public class Employee {
         this.department = department;
         this.salary = salary;
         this.id = idCounter++;
-
-
     }
-
     public void setDepartment(int department) {
         this.department = department;
     }
@@ -56,7 +52,6 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-
     @Override
     public String toString() {
         return "Employee{" +
@@ -68,7 +63,6 @@ public class Employee {
                 ", id=" + id +
                 '}';
     }
-
     public  String getFullName() {
         return  "Employee{" +
                 "surname='" + surname + '\'' +
@@ -76,14 +70,3 @@ public class Employee {
                 ", patronymic='" + patronymic;
     }
 }
-
-
-
-
-
-
-            
-
-
-
-
